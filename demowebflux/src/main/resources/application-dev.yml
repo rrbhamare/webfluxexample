@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+
+demo:
+  client:
+    integration:
+      url: http://localhost:8081
+      user: demo
+      password: demo
+      connection-timeout: 15000
+      read-timeout: 15000

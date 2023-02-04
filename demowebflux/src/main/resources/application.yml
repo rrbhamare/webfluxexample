@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active: dev,l2stdout
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: GMT+2
+  main:
+    allow-bean-definition-overriding: true
+    banner-mode: 'off'
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 90MB
+server:
+  port: 8080
+
+management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+    logfile:
+      enabled: true
+    jolokia:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    net:
+      sunrise: debug
